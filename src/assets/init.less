@@ -1,0 +1,35 @@
+.pre(@style, @value) {
+  -webkit-@{style}: @value;
+  -moz-@{style}: @value;
+  -ms-@{style}: @value;
+  -o-@{style}: @value;
+    @{style}: @value;
+}
+
+.border-radius(@value) {
+  .pre(border-radius, @value);
+}
+
+.box-shadow(@value) {
+  .pre(box-shadow, @value);
+}
+
+.transition(@value) {
+  .pre(transition, @value);
+}
+
+.transform(@value) {
+  .pre(transform, @value);
+}
+
+.animation(@value){
+  .pre(animation, @value);
+}
+
+.keyframes (@name, @frames){
+  @-webkit-keyframes @name { @frames(); }
+  @-moz-keyframes @name { @frames(); }
+  @-ms-keyframes @name { @frames();}
+  @-o-keyframes @name { @frames(); }
+  @keyframes @name { @frames(); }
+}
