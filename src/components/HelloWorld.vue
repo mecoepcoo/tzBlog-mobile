@@ -95,9 +95,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="less">
+@c: blue;
 h1, h2 {
   font-weight: normal;
+  color: @c;
 }
 ul {
   list-style-type: none;
