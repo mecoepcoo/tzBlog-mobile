@@ -10,8 +10,31 @@
   </div>
 </template>
 <script>
-export default {
+import _postService from '../share/post.service'
 
+export default {
+  data () {
+    return {
+      postList: []
+    }
+  },
+  mounted () {
+    console.log(_postService)
+    this.getPosts()
+  },
+  mixins: [
+    _postService
+  ],
+  methods: {
+    getPosts: function () {
+      _postService.methods._getPosts()
+        .then(datas => {
+          console.log(datas)
+        }, err => {
+          console.error(err)
+        })
+    }
+  }
 }
 </script>
 <style lang="less" scoped>
