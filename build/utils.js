@@ -29,6 +29,13 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  const lessLoader = {
+    loader: 'less-loeader',
+    options: {
+      sourceMap: options.sourceMap
+    }
+  }
+
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
@@ -73,6 +80,7 @@ exports.styleLoaders = function (options) {
 
   for (const extension in loaders) {
     const loader = loaders[extension]
+    // loader.splice(2, 0, '!autoprefixer-loader?browsers=last 7 version')
     output.push({
       test: new RegExp('\\.' + extension + '$'),
       use: loader

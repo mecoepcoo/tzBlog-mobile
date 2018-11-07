@@ -1,12 +1,12 @@
 <template>
   <div id="my-header">
     <div class="header-avatar"></div>
-    <div class="title">~ 天真呀 ~</div>
-    <ul class="nav">
-      <li>&nbsp;首页&nbsp;</li>
-      <li>&nbsp;归档&nbsp;</li>
-      <li>&nbsp;关于&nbsp;</li>
-    </ul>
+    <div class="title">~ 天真博客 ~</div>
+    <div class="nav">
+      <router-link to="/" class="link">&nbsp;首页&nbsp;</router-link>
+      <router-link to="/archives" class="link">&nbsp;归档&nbsp;</router-link>
+      <router-link to="/about" class="link">&nbsp;关于&nbsp;</router-link>
+    </div>
   </div>
 </template>
 <script>
@@ -20,7 +20,7 @@ export default {
   },
   mounted () {
     console.log(_postService)
-    this.getPosts()
+    // this.getPosts()
   },
   mixins: [
     _postService
@@ -61,11 +61,14 @@ export default {
   .nav {
     padding: .1rem 0;
     font-size: @fs - 2;
-    li {
+    .link {
       display: inline;
       margin: .12rem;
       color: #888;
       border-bottom: 1px solid;
+      text-decoration: none;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
   }
 }

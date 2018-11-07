@@ -1,13 +1,13 @@
 import http from '../share/http'
-import config from '../share/config'
+import api from './apiConfig'
 
 const postService = {
   created: function () {
-    console.log('hello')
+    console.log('postService loaded')
   },
   methods: {
     _getPosts: function () {
-      return http.get(`${config.siteRoot}posts`)
+      return http.get(`${api.siteRoot}posts`)
     }
   }
 }
