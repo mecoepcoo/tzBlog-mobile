@@ -66,26 +66,49 @@ export default {
   &-header {
     padding: .15rem 0;
     color: #555;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -.19rem;
+      top: .21rem;
+      width: .1rem;
+      height: .1rem;
+      background-color: #ddd;
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
   }
   &-container {
     position: relative;
     &::before {
       position: absolute;
       content: "";
-      top: .16rem;
+      top: .22rem;
       left: -.15rem;
       width: 3px;
-      height: 100%;
+      height: 98%;
       background-color: #eee;
       z-index: -1;
     }
   }
 }
 .posts {
+  position: relative;
   padding: .15rem 0 .25rem 0;
   .year {
     margin-top: .15rem;
     margin-bottom: .45rem;
+    &::before {
+      position: absolute;
+      content: "";
+      left: -.18rem;
+      top: .44rem;
+      width: .08rem;
+      height: .08rem;
+      border-radius: 50%;
+      background-color: #aaa;
+      border: 1px solid #fff;
+    }
   }
 }
 .posts-item {
@@ -97,6 +120,17 @@ export default {
   text-decoration: none;
   color: #555;
   -webkit-tap-highlight-color: transparent;
+  &::before {
+    position: absolute;
+    content: "";
+    left: -.17rem;
+    top: .08rem;
+    width: .05rem;
+    height: .05rem;
+    border-radius: 50%;
+    background-color: #bbb;
+    border: 1px solid #fff;
+  }
   span {
     display: block;
     height: 100%;

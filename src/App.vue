@@ -43,4 +43,8 @@ h1, h2, h3, h4, h5, h6, div, ul, li, ol, table, label, span, a, article, section
 .content-wrap {
   padding: .36rem;
 }
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
 </style>

@@ -7,6 +7,7 @@
       <router-link to="/archives" class="link">&nbsp;归档&nbsp;</router-link>
       <router-link to="/about" class="link">&nbsp;关于&nbsp;</router-link>
     </div>
+    <div class="visit">共计x人访问过本站，x次浏览</div>
   </div>
 </template>
 <script>
@@ -70,6 +71,11 @@ export default {
       outline: none;
       -webkit-tap-highlight-color: transparent;
     }
+  }
+  .visit {
+    margin-top: .1rem;
+    font-size: 12px;
+    color: #c3c3c3;
   }
 }
 </style>
