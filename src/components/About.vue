@@ -71,6 +71,8 @@ export default {
   &-inner {
     position: relative;
     margin: 0 auto;
+    text-align: justify;
+    word-break: break-all;
     p {
       line-height: 3;
       a {
