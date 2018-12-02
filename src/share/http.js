@@ -5,11 +5,13 @@ class Http {
   /**
    * GET request
    * @param {string} url
-   * @param {json} [params]
+   * @param {object} [params]
+   * @param {object} [options]
    */
-  async get (url, params = '') {
+  async get (url, params = {}, ...options) {
     const {data} = await axios.get(url, {
-      params: params
+      params: params,
+      ...options,
     })
     return data
   }
@@ -17,10 +19,13 @@ class Http {
   /**
    * POST request
    * @param {string} url
-   * @param {json} datas
+   * @param {object} datas
+   * @param {object} [options]
    */
-  async post (url, datas = {}) {
-    const {data} = await axios.post(url, datas)
+  async post (url, datas = {}, ...options) {
+    const {data} = await axios.post(url, datas, {
+      ...options,
+    })
     return data
   }
 }
